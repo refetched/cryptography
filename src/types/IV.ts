@@ -1,3 +1,1 @@
-import { BinaryLike } from 'crypto';
-
-export type IV = BinaryLike;
+export type IV = Buffer;
