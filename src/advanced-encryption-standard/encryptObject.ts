@@ -1,7 +1,8 @@
 import { getStringFromObject } from '@refetched/core';
+import { Encrypted } from '@refetched/cryptography-types';
 import { Cipher } from 'crypto';
-import { Encrypted, encryptString } from '..';
+import { encryptString } from '.';
 
-export const encryptObject = <T extends object>(obj: T, cipher: Cipher): Encrypted => {
-  return encryptString(getStringFromObject(obj), cipher);
+export const encryptObject = <T extends object>(value: T, cipher: Cipher): Encrypted => {
+  return encryptString(getStringFromObject(value), cipher);
 };

@@ -1,7 +1,8 @@
 import { encodeBuffer } from '@refetched/core';
+import { Encrypted } from '@refetched/cryptography-types';
 import { Cipher } from 'crypto';
-import { Encrypted, encryptString } from '..';
+import { encryptString } from '.';
 
-export const encryptBuffer = (buf: Buffer, cipher: Cipher): Encrypted => {
-  return encryptString(encodeBuffer(buf), cipher);
+export const encryptBuffer = (value: Buffer, cipher: Cipher): Encrypted => {
+  return encryptString(encodeBuffer(value), cipher);
 };

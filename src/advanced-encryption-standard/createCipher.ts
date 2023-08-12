@@ -1,6 +1,6 @@
+import { IV } from '@refetched/cryptography-types';
 import { Cipher, CipherKey, createCipheriv } from 'crypto';
-import { IV } from '..';
 
-export const createCipher = (key: CipherKey, iv: IV): Cipher => {
-  return createCipheriv('aes-256-cbc', key, iv);
+export const createCipher = (cipherKey: CipherKey, iv: IV): Cipher => {
+  return createCipheriv('aes-256-cbc', cipherKey, iv);
 };
